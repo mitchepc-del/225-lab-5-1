@@ -1,12 +1,113 @@
 <!DOCTYPE html>
-<html>
-  <head> 
-    <meta charset="UTF-8">
-    <title>Peter Mitchell</title> 
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Peter Mitchell!</h1>
-    <h5>Lab 3-7 Works!</h5>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Complete Celebration 🎓</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 60px 20px 30px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      margin: 30px auto;
+      padding: 25px;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .celebration {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .emoji {
+      font-size: 2rem;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #ffd700;
+      color: #222;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="emoji">🎓 🎉 🎓</div>
+    <h1>Lab 5-1 COMPLETE!</h1>
+    <p class="subtitle">Celebrating the successful completion of a lab CIT 225.</p>
+  </header>
+
+  <div class="card">
+    <h2>Congratulations!</h2>
+    <p class="celebration">
+      You’ve successfully navigated to the web page celebrating the final lab for CIT 225.
+    </p>
+
+    <button onclick="showMessage()">Click for a Surprise</button>
+    <p id="message" style="margin-top: 15px;"></p>
+  </div>
+
+  <footer>
+    Made with pride and celebration • 2026
+  </footer>
+
+  <script>
+    function showMessage() {
+      const messages = [
+        "You did it! Time to celebrate! 🎉",
+        "Your hard work paid off! 💪",
+        "On to the next big adventure! 🚀",
+        "Success looks good on you! 😄"
+      ];
+
+      const random = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById("message").textContent = random;
+    }
+  </script>
+
+</body>
 </html>
