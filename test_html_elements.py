@@ -7,26 +7,35 @@ import unittest
 
 class TestPageContent(unittest.TestCase):
 
-```
-def setUp(self):
-    firefox_options = Options()
-    firefox_options.add_argument("--headless")
-    firefox_options.add_argument("--no-sandbox")
-    firefox_options.add_argument("--disable-dev-shm-usage")
-    self.driver = webdriver.Firefox(options=firefox_options)
+    def setUp(self):
+        firefox_options = Options()
+        firefox_options.add_argument("--headless")
+        firefox_options.add_argument("--no-sandbox")
+        firefox_options.add_argument("--disable-dev-shm-usage")
+        self.driver = webdriver.Firefox(options=firefox_options)
 
-def test_page_elements(self):
-    driver = self.driver
-    driver.get("http://10.48.229.180")
+    def test_page_elements(self):
+        driver = self.driver
+        driver.get("http://10.48.229.180")
 
-    wait = WebDriverWait(driver, 10)
+        wait = WebDriverWait(driver, 10)
 
-    h1 = wait.until(EC.presence_of_element_located((By.TAG_NAME, "h1")))
-    self.assertEqual("Lab 5-1 COMPLETE!", h1.text)
+        h1 = wait.until(EC.presence_of_element_located((By.TAG_NAME, "h1")))
+        self.assertEqual("Lab 5-1 COMPLETE!", h1.text)
 
-def tearDown(self):
-    self.driver.quit()
-```
+    def tearDown(self):
+        self.driver.quit()
 
-if **name** == "**main**":
-unittest.main()
+if __name__ == "__main__":
+    unittest.main()
+:::
+
+---
+
+## 🧠 Why this happened
+
+When you copy code from places that format it like:
+
+````markdown
+```python
+code here
