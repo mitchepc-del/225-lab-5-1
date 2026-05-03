@@ -28,14 +28,4 @@ class TestPageContent(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-:::
 
----
-
-## 🧠 Why this happened
-
-When you copy code from places that format it like:
-
-````markdown
-```python
-code here
